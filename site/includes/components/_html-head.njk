@@ -26,10 +26,11 @@
   {% include "components/_social-meta.njk" %}
 
   {# lastly include favicon, fonts, etc #}
-  <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+  <link rel="icon" type="image/png" href="{{ site.favicon }}">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
 </head>
 
-<body class="min-h-screen font-sans antialiased leading-normal text-black text-default">
+<body
+      class="flex flex-col min-h-screen font-serif antialiased leading-normal text-black bg-gray-200 text-default">

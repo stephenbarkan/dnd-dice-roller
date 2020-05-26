@@ -1,0 +1,36 @@
+[{
+    "name": "d20",
+    "amount": "20",
+    "selected": true
+  },
+  {
+    "name": "d4",
+    "amount": "4",
+    "selected": false
+  },
+  {
+    "name": "d6",
+    "amount": "6",
+    "selected": false
+  },
+  {
+    "name": "d8",
+    "amount": "8",
+    "selected": false
+  },
+  {
+    "name": "d10",
+    "amount": "10",
+    "selected": false
+  },
+  {
+    "name": "d12",
+    "amount": "12",
+    "selected": false
+  },
+  {
+    "name": "d100",
+    "amount": "100",
+    "selected": false
+  }
+]

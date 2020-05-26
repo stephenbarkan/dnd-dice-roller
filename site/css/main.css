@@ -3,6 +3,7 @@
 /* @import custom css from the partials folder here */
 @import "/partials/_fonts";
 @import "/partials/_focus";
+@import "/partials/_dice";
 /*                                                  */
 
 @import "tailwindcss/components";

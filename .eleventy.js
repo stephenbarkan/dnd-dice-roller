@@ -31,7 +31,7 @@ module.exports = eleventyConfig => {
 
   // Include our static assets
   eleventyConfig.addPassthroughCopy("site/images")
-  eleventyConfig.addPassthroughCopy("site/webfonts")
+  eleventyConfig.addPassthroughCopy("site/fonts")
 
   return {
     templateFormats: ["md", "njk"],

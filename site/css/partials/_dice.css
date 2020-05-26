@@ -1,0 +1,8 @@
+input[type="radio"]:checked {
+  & + label {
+  @apply bg-teal-100 border-teal-500 text-teal-900;
+}
+  &:focus + label {
+    @apply shadow-outline border-blue-700;
+  }
+} 
