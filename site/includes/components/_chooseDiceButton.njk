@@ -14,9 +14,9 @@
          @click="amount = `{{multiplier}}`, clearValue = true"
          class="absolute inset-0 flex rounded-lg">
     <span
-          class="flex items-center justify-center flex-1 px-3 py-6 font-mono text-2xl leading-none tracking-wide text-center text-red-500 transition-all duration-100 ease-in-out bg-red-100 border border-red-500 border-opacity-25 rounded-lg shadow-button hover:bg-red-200"
+          class="flex items-center justify-center flex-1 px-3 py-6 font-mono text-3xl leading-none tracking-wide text-center text-red-500 transition-all duration-100 ease-in-out bg-red-100 border border-red-500 border-opacity-25 rounded-lg shadow-button hover:bg-red-200"
           style="--shadowColor: 252, 102, 79; text-shadow: 1px 1px 2px #FFFFFF;">
-      <span class="relative block transition-transform duration-100 ease-in-out">d{{multiplier}}</span>
+      <span class="relative block transition-transform duration-100 ease-in-out">{{multiplier}}</span>
     </span>
   </label>
 </div>

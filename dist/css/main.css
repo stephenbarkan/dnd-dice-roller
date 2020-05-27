@@ -599,7 +599,10 @@ input[type="radio"]:checked + label > span {
   background-color: #FFEDE4;
   background-color: rgba(255, 237, 228, var(--bg-opacity));
   --border-opacity: 0.25;
-  box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04)
+  box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
+  --text-opacity: 1;
+  color: #e4604c;
+  color: rgba(228, 96, 76, var(--text-opacity))
 }
 
 input[type="radio"]:checked + label > span > span {
@@ -1291,8 +1294,8 @@ input[type="radio"]:checked {
 
 .divide-red-600 > :not(template) ~ :not(template){
   --divide-opacity: 1;
-  border-color: #E8523B;
-  border-color: rgba(232, 82, 59, var(--divide-opacity));
+  border-color: #e4604c;
+  border-color: rgba(228, 96, 76, var(--divide-opacity));
 }
 
 .divide-orange-100 > :not(template) ~ :not(template){
@@ -1909,8 +1912,8 @@ input[type="radio"]:checked {
 
 .bg-red-600{
   --bg-opacity: 1;
-  background-color: #E8523B;
-  background-color: rgba(232, 82, 59, var(--bg-opacity));
+  background-color: #e4604c;
+  background-color: rgba(228, 96, 76, var(--bg-opacity));
 }
 
 .bg-orange-100{
@@ -2445,8 +2448,8 @@ input[type="radio"]:checked {
 
 .hover\:bg-red-600:hover{
   --bg-opacity: 1;
-  background-color: #E8523B;
-  background-color: rgba(232, 82, 59, var(--bg-opacity));
+  background-color: #e4604c;
+  background-color: rgba(228, 96, 76, var(--bg-opacity));
 }
 
 .hover\:bg-orange-100:hover{
@@ -2981,8 +2984,8 @@ input[type="radio"]:checked {
 
 .focus\:bg-red-600:focus{
   --bg-opacity: 1;
-  background-color: #E8523B;
-  background-color: rgba(232, 82, 59, var(--bg-opacity));
+  background-color: #e4604c;
+  background-color: rgba(228, 96, 76, var(--bg-opacity));
 }
 
 .focus\:bg-orange-100:focus{
@@ -3657,8 +3660,8 @@ input[type="radio"]:checked {
 
 .border-red-600{
   --border-opacity: 1;
-  border-color: #E8523B;
-  border-color: rgba(232, 82, 59, var(--border-opacity));
+  border-color: #e4604c;
+  border-color: rgba(228, 96, 76, var(--border-opacity));
 }
 
 .border-orange-100{
@@ -4193,8 +4196,8 @@ input[type="radio"]:checked {
 
 .hover\:border-red-600:hover{
   --border-opacity: 1;
-  border-color: #E8523B;
-  border-color: rgba(232, 82, 59, var(--border-opacity));
+  border-color: #e4604c;
+  border-color: rgba(228, 96, 76, var(--border-opacity));
 }
 
 .hover\:border-orange-100:hover{
@@ -4729,8 +4732,8 @@ input[type="radio"]:checked {
 
 .focus\:border-red-600:focus{
   --border-opacity: 1;
-  border-color: #E8523B;
-  border-color: rgba(232, 82, 59, var(--border-opacity));
+  border-color: #e4604c;
+  border-color: rgba(228, 96, 76, var(--border-opacity));
 }
 
 .focus\:border-orange-100:focus{
@@ -8459,8 +8462,8 @@ input[type="radio"]:checked {
 
 .placeholder-red-600::placeholder{
   --placeholder-opacity: 1;
-  color: #E8523B;
-  color: rgba(232, 82, 59, var(--placeholder-opacity));
+  color: #e4604c;
+  color: rgba(228, 96, 76, var(--placeholder-opacity));
 }
 
 .placeholder-orange-100::placeholder{
@@ -8995,8 +8998,8 @@ input[type="radio"]:checked {
 
 .focus\:placeholder-red-600:focus::placeholder{
   --placeholder-opacity: 1;
-  color: #E8523B;
-  color: rgba(232, 82, 59, var(--placeholder-opacity));
+  color: #e4604c;
+  color: rgba(228, 96, 76, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-orange-100:focus::placeholder{
@@ -9622,11 +9625,11 @@ input[type="radio"]:checked {
 }
 
 .shadow-button{
-  box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
 }
 
 .shadow-buttonHover{
-  box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+  box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
 }
 
 .hover\:shadow-xs:hover{
@@ -9670,11 +9673,11 @@ input[type="radio"]:checked {
 }
 
 .hover\:shadow-button:hover{
-  box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
 }
 
 .hover\:shadow-buttonHover:hover{
-  box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+  box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
 }
 
 .focus\:shadow-xs:focus{
@@ -9718,11 +9721,11 @@ input[type="radio"]:checked {
 }
 
 .focus\:shadow-button:focus{
-  box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
 }
 
 .focus\:shadow-buttonHover:focus{
-  box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+  box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
 }
 
 .fill-current{
@@ -9869,8 +9872,8 @@ input[type="radio"]:checked {
 
 .text-red-600{
   --text-opacity: 1;
-  color: #E8523B;
-  color: rgba(232, 82, 59, var(--text-opacity));
+  color: #e4604c;
+  color: rgba(228, 96, 76, var(--text-opacity));
 }
 
 .text-orange-100{
@@ -10405,8 +10408,8 @@ input[type="radio"]:checked {
 
 .hover\:text-red-600:hover{
   --text-opacity: 1;
-  color: #E8523B;
-  color: rgba(232, 82, 59, var(--text-opacity));
+  color: #e4604c;
+  color: rgba(228, 96, 76, var(--text-opacity));
 }
 
 .hover\:text-orange-100:hover{
@@ -10941,8 +10944,8 @@ input[type="radio"]:checked {
 
 .focus\:text-red-600:focus{
   --text-opacity: 1;
-  color: #E8523B;
-  color: rgba(232, 82, 59, var(--text-opacity));
+  color: #e4604c;
+  color: rgba(228, 96, 76, var(--text-opacity));
 }
 
 .focus\:text-orange-100:focus{
@@ -14930,8 +14933,8 @@ input[type="radio"]:checked {
 
   .xs\:divide-red-600 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--divide-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--divide-opacity));
   }
 
   .xs\:divide-orange-100 > :not(template) ~ :not(template){
@@ -15548,8 +15551,8 @@ input[type="radio"]:checked {
 
   .xs\:bg-red-600{
     --bg-opacity: 1;
-    background-color: #E8523B;
-    background-color: rgba(232, 82, 59, var(--bg-opacity));
+    background-color: #e4604c;
+    background-color: rgba(228, 96, 76, var(--bg-opacity));
   }
 
   .xs\:bg-orange-100{
@@ -16084,8 +16087,8 @@ input[type="radio"]:checked {
 
   .xs\:hover\:bg-red-600:hover{
     --bg-opacity: 1;
-    background-color: #E8523B;
-    background-color: rgba(232, 82, 59, var(--bg-opacity));
+    background-color: #e4604c;
+    background-color: rgba(228, 96, 76, var(--bg-opacity));
   }
 
   .xs\:hover\:bg-orange-100:hover{
@@ -16620,8 +16623,8 @@ input[type="radio"]:checked {
 
   .xs\:focus\:bg-red-600:focus{
     --bg-opacity: 1;
-    background-color: #E8523B;
-    background-color: rgba(232, 82, 59, var(--bg-opacity));
+    background-color: #e4604c;
+    background-color: rgba(228, 96, 76, var(--bg-opacity));
   }
 
   .xs\:focus\:bg-orange-100:focus{
@@ -17296,8 +17299,8 @@ input[type="radio"]:checked {
 
   .xs\:border-red-600{
     --border-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--border-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--border-opacity));
   }
 
   .xs\:border-orange-100{
@@ -17832,8 +17835,8 @@ input[type="radio"]:checked {
 
   .xs\:hover\:border-red-600:hover{
     --border-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--border-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--border-opacity));
   }
 
   .xs\:hover\:border-orange-100:hover{
@@ -18368,8 +18371,8 @@ input[type="radio"]:checked {
 
   .xs\:focus\:border-red-600:focus{
     --border-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--border-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--border-opacity));
   }
 
   .xs\:focus\:border-orange-100:focus{
@@ -22098,8 +22101,8 @@ input[type="radio"]:checked {
 
   .xs\:placeholder-red-600::placeholder{
     --placeholder-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--placeholder-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--placeholder-opacity));
   }
 
   .xs\:placeholder-orange-100::placeholder{
@@ -22634,8 +22637,8 @@ input[type="radio"]:checked {
 
   .xs\:focus\:placeholder-red-600:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--placeholder-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--placeholder-opacity));
   }
 
   .xs\:focus\:placeholder-orange-100:focus::placeholder{
@@ -23261,11 +23264,11 @@ input[type="radio"]:checked {
   }
 
   .xs\:shadow-button{
-    box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
   }
 
   .xs\:shadow-buttonHover{
-    box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+    box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
   }
 
   .xs\:hover\:shadow-xs:hover{
@@ -23309,11 +23312,11 @@ input[type="radio"]:checked {
   }
 
   .xs\:hover\:shadow-button:hover{
-    box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
   }
 
   .xs\:hover\:shadow-buttonHover:hover{
-    box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+    box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
   }
 
   .xs\:focus\:shadow-xs:focus{
@@ -23357,11 +23360,11 @@ input[type="radio"]:checked {
   }
 
   .xs\:focus\:shadow-button:focus{
-    box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
   }
 
   .xs\:focus\:shadow-buttonHover:focus{
-    box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+    box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
   }
 
   .xs\:fill-current{
@@ -23508,8 +23511,8 @@ input[type="radio"]:checked {
 
   .xs\:text-red-600{
     --text-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--text-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--text-opacity));
   }
 
   .xs\:text-orange-100{
@@ -24044,8 +24047,8 @@ input[type="radio"]:checked {
 
   .xs\:hover\:text-red-600:hover{
     --text-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--text-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--text-opacity));
   }
 
   .xs\:hover\:text-orange-100:hover{
@@ -24580,8 +24583,8 @@ input[type="radio"]:checked {
 
   .xs\:focus\:text-red-600:focus{
     --text-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--text-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--text-opacity));
   }
 
   .xs\:focus\:text-orange-100:focus{
@@ -28560,8 +28563,8 @@ input[type="radio"]:checked {
 
   .sm\:divide-red-600 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--divide-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--divide-opacity));
   }
 
   .sm\:divide-orange-100 > :not(template) ~ :not(template){
@@ -29178,8 +29181,8 @@ input[type="radio"]:checked {
 
   .sm\:bg-red-600{
     --bg-opacity: 1;
-    background-color: #E8523B;
-    background-color: rgba(232, 82, 59, var(--bg-opacity));
+    background-color: #e4604c;
+    background-color: rgba(228, 96, 76, var(--bg-opacity));
   }
 
   .sm\:bg-orange-100{
@@ -29714,8 +29717,8 @@ input[type="radio"]:checked {
 
   .sm\:hover\:bg-red-600:hover{
     --bg-opacity: 1;
-    background-color: #E8523B;
-    background-color: rgba(232, 82, 59, var(--bg-opacity));
+    background-color: #e4604c;
+    background-color: rgba(228, 96, 76, var(--bg-opacity));
   }
 
   .sm\:hover\:bg-orange-100:hover{
@@ -30250,8 +30253,8 @@ input[type="radio"]:checked {
 
   .sm\:focus\:bg-red-600:focus{
     --bg-opacity: 1;
-    background-color: #E8523B;
-    background-color: rgba(232, 82, 59, var(--bg-opacity));
+    background-color: #e4604c;
+    background-color: rgba(228, 96, 76, var(--bg-opacity));
   }
 
   .sm\:focus\:bg-orange-100:focus{
@@ -30926,8 +30929,8 @@ input[type="radio"]:checked {
 
   .sm\:border-red-600{
     --border-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--border-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--border-opacity));
   }
 
   .sm\:border-orange-100{
@@ -31462,8 +31465,8 @@ input[type="radio"]:checked {
 
   .sm\:hover\:border-red-600:hover{
     --border-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--border-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--border-opacity));
   }
 
   .sm\:hover\:border-orange-100:hover{
@@ -31998,8 +32001,8 @@ input[type="radio"]:checked {
 
   .sm\:focus\:border-red-600:focus{
     --border-opacity: 1;
-    border-color: #E8523B;
-    border-color: rgba(232, 82, 59, var(--border-opacity));
+    border-color: #e4604c;
+    border-color: rgba(228, 96, 76, var(--border-opacity));
   }
 
   .sm\:focus\:border-orange-100:focus{
@@ -35728,8 +35731,8 @@ input[type="radio"]:checked {
 
   .sm\:placeholder-red-600::placeholder{
     --placeholder-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--placeholder-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-orange-100::placeholder{
@@ -36264,8 +36267,8 @@ input[type="radio"]:checked {
 
   .sm\:focus\:placeholder-red-600:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--placeholder-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-orange-100:focus::placeholder{
@@ -36891,11 +36894,11 @@ input[type="radio"]:checked {
   }
 
   .sm\:shadow-button{
-    box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
   }
 
   .sm\:shadow-buttonHover{
-    box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+    box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
   }
 
   .sm\:hover\:shadow-xs:hover{
@@ -36939,11 +36942,11 @@ input[type="radio"]:checked {
   }
 
   .sm\:hover\:shadow-button:hover{
-    box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
   }
 
   .sm\:hover\:shadow-buttonHover:hover{
-    box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+    box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
   }
 
   .sm\:focus\:shadow-xs:focus{
@@ -36987,11 +36990,11 @@ input[type="radio"]:checked {
   }
 
   .sm\:focus\:shadow-button:focus{
-    box-shadow: 1px 2px 4px rgba(var(--shadowColor), 0.15), 1px 1px 3px -2px rgba(0, 0, 0, 0.2), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8);
   }
 
   .sm\:focus\:shadow-buttonHover:focus{
-    box-shadow: inset 0px 0px 7px -1px rgba(0, 0, 0, .25), inset 4px 4px 7px rgba(255, 255, 255, .5), inset -14px -12px 16px rgba(var(--shadowColor), 0.05), inset 11px 11px 16px rgba(var(--shadowColor), 0.04);
+    box-shadow: inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125);
   }
 
   .sm\:fill-current{
@@ -37138,8 +37141,8 @@ input[type="radio"]:checked {
 
   .sm\:text-red-600{
     --text-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--text-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--text-opacity));
   }
 
   .sm\:text-orange-100{
@@ -37674,8 +37677,8 @@ input[type="radio"]:checked {
 
   .sm\:hover\:text-red-600:hover{
     --text-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--text-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--text-opacity));
   }
 
   .sm\:hover\:text-orange-100:hover{
@@ -38210,8 +38213,8 @@ input[type="radio"]:checked {
 
   .sm\:focus\:text-red-600:focus{
     --text-opacity: 1;
-    color: #E8523B;
-    color: rgba(232, 82, 59, var(--text-opacity));
+    color: #e4604c;
+    color: rgba(228, 96, 76, var(--text-opacity));
   }
 
   .sm\:focus\:text-orange-100:focus{
