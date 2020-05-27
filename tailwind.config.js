@@ -9,20 +9,42 @@ module.exports = {
         lg: '2rem',
       }
     },
+    colors: {
+      'page-bg': '#FBFAF9',
+      lcd: {
+        'bg': '#393A31',
+        'border': '#171717',
+        'text': '#5EB32A',
+      },
+      btn: {
+        'bg': '#E7E8E3',
+        'border': '#AEB0A1',
+        'text': '#616259',
+      },
+      'btn-active': {
+        'bg': '#CDDFA8',
+        'border': '#71955C',
+        'text': '#4E5540',
+      },
+      roll: {
+        'bg': '#EEA650',
+        'border': '#C99565',
+        'text': '#6A3607',
+      },
+      'roll-active': {
+        'bg': '#EFD6A1',
+        'border': '#BF9C7C',
+        'text': '#A0500A',
+      },
+    },
+
     extend: {
       screens: {
         'xs': '500px',
         'sm': '640px'
       },
-      colors: {
-        red: {
-          '100': '#FFF1EB',
-          '200': '#ffdfd2',
-          '300': '#ffdfd2',
-          '400': '#FF9F91',
-          '500': '#FC664F',
-          '600': '#e4604c',
-        }
+      opacity: {
+        '10': '.10',
       },
 
       borderRadius: {
@@ -30,22 +52,28 @@ module.exports = {
       },
 
       boxShadow: {
-        // button: '1px 4px 4px rgba(var(--shadowColor), 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(var(--shadowColor), 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8)',
-        // buttonHover: 'inset 0 2px 0 -1px rgba(var(--shadowColor),0.11), inset 0 2px 9px 0 rgba(var(--shadowColor),0.25), inset 0 -1px 0 1px rgba(var(--shadowColor), .125)',
-        button: "",
-        buttonHover: ""
+        lcd: '1px 2px 4px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.25), inset -2px -3px 11px rgba(0, 0, 0, 0.75), inset 2px 4px 5px rgba(255, 255, 255, 0.4)',
+        btn: '1px 2px 4px rgba(58, 52, 49, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.17), inset -2px -3px 11px rgba(58, 52, 49, 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8)',
+        'btn-active': 'inset -6px -6px 10px rgba(255, 255, 255, 0.8), inset 3px 3px 18px rgba(138, 145, 108, 0.8)',
+        roll: '1px 2px 4px rgba(58, 52, 49, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.17), inset -2px -3px 11px rgba(58, 52, 49, 0.15), inset 2px 4px 5px rgba(255, 255, 255, 0.8)',
+        'roll-active': 'inset -6px -6px 10px #FFFFFF, inset 3px 3px 18px #D6882B'
       },
 
       spacing: {
         full: '100%',
       },
       fontFamily: {
-        'serif': ['LunchType24', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-        'mono': ['LunchType24', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif']
+        'serif': ['GangsterGrotesk-Bold', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+        'mono': ['digital-numbers', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif']
       }
     },
 
   },
-  variants: {},
+  variants: {
+    boxShadow: ['active, hover, focus'],
+    textColor: ['active, hover, focus'],
+    backgroundColor: ['active, hover, focus'],
+    borderColor: ['active, hover, focus'],
+  },
   plugins: [],
 }

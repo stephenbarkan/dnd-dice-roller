@@ -1,5 +1,5 @@
     <div
-         class="relative flex items-center justify-between flex-1 px-6 py-8 overflow-hidden text-6xl leading-none text-gray-300 bg-gray-900 border-2 border-gray-500 border-opacity-75 rounded-xl shadow-button"
+         class="relative flex items-center justify-between flex-1 px-6 py-8 overflow-hidden font-mono text-6xl leading-none border-2 text-lcd-text bg-lcd-bg border-lcd-border rounded-xl shadow-lcd"
          style="--shadowColor: 74, 85, 104">
 
       <div class="grid w-20 h-20 text-gray-600 grid-absolute">
@@ -22,19 +22,21 @@
 
 
       <div
-           class="text-red-200 transition transform"
-           x-show="clearValue == false"
-           x-transition:enter="ease-out duration-100"
-           x-transition:enter-start="opacity-0 translate-y-6"
-           x-transition:enter-end="opacity-100 transform-none"
-           x-transition:leave="ease-in duration-100"
-           x-transition:leave-start="opacity-100"
-           x-transition:leave-end="opacity-0 -translate-y-6">
+           class="flex">
         <span x-show="amount == 20 && (outcome === 20 || outcome === 1)"
               class="font-mono text-base tracking-wide">nat</span>
-        <span class="relative"
-              style="font-variant-numeric: tabular-nums;"
-              x-text="outcome">
+        <span class="relative block text-opacity-10 text-lcd-text"
+              style="font-variant-numeric: tabular-nums;">000
+          <span
+                x-text="outcome"
+                x-show="clearValue == false"
+                x-transition:enter="ease-out duration-100"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-100"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="absolute inset-0 block text-right text-opacity-100 transition text-lcd-text"></span>
         </span>
 
       </div>

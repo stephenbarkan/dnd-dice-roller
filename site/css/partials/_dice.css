@@ -1,6 +1,6 @@
 input[type="radio"]:checked {
   & + label > span {
-  @apply bg-red-200 border-red-500 border-opacity-75 shadow-buttonHover text-red-600;
+  @apply bg-btn-active-bg border-btn-active-border shadow-btn-active text-btn-active-text;
 
   /* & > span {
     @apply transform scale-95 translate-y-px origin-center;

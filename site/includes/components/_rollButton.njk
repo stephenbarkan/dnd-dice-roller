@@ -1,5 +1,5 @@
       <button
-              class="px-8 py-4 text-2xl tracking-wide text-red-600 transition duration-150 ease-in-out bg-red-400 border border-red-500 border-opacity-50 rounded-lg shadow hover:border-opacity-50 hover:bg-red-600"
+              class="text-2xl tracking-wide transition-all duration-150 ease-in-out border rounded-lg shadow-roll text-roll-text bg-roll-bg border-roll-border active:text-roll-active-text active:bg-roll-active-bg active:border-roll-active-border active:shadow-roll-active"
               style="--shadowColor: 100,100,100"
               @click="
               if (clearValue === true) {
@@ -12,7 +12,4 @@
               setTimeout( function() {
                 clearValue = false
                 outcome = Math.ceil(Math.random() * amount)
-              }, timeoutAmount)">
-
-        Roll a d<span x-text="amount"></span>
-      </button>
+              }, timeoutAmount)">roll</button>
