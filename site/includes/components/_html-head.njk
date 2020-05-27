@@ -2,35 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}} | {{ site.name }}</title>
-  <meta name="description"
-        content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{{title}} | {{ site.name }}</title>
+      <meta name="description"
+            content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+      <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-  {% if helpers.environment == "development" %}
-  <link rel="stylesheet" href="/css/main.css">
-  {% else %}
-  {# else, use the minified css file for production #}
-  <link rel="stylesheet" href="/css/main.min.css">
-  {% endif %}
+      {% if helpers.environment == "development" %}
+      <link rel="stylesheet" href="/css/main.css">
+      {% else %}
+      {# else, use the minified css file for production #}
+      <link rel="stylesheet" href="/css/main.min.css">
+      {% endif %}
 
-  {% if helpers.environment == "development" %}
-  <script src="/js/main.js" defer></script>
-  {% else %}
-  <script src="/js/main.min.js" defer></script>
-  {% endif %}
+      {% if helpers.environment == "development" %}
+      <script src="/js/main.js" defer></script>
+      {% else %}
+      <script src="/js/main.min.js" defer></script>
+      {% endif %}
 
-  {# include social meta tags #}
-  {% include "components/_social-meta.njk" %}
+      {# include social meta tags #}
+      {% include "components/_social-meta.njk" %}
 
-  {# lastly include favicon, fonts, etc #}
-  <link rel="icon" type="image/png" href="{{ site.favicon }}">
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      {# lastly include favicon, fonts, etc #}
+      <link rel="icon" type="image/png" href="{{ site.favicon }}">
+      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
 </head>
 
 <body
-      class="flex flex-col min-h-screen font-serif antialiased leading-normal text-black bg-gray-200 text-default">
+      class="flex flex-col min-h-screen font-serif antialiased leading-normal text-black bg-red-100 bg-opacity-50 text-default">

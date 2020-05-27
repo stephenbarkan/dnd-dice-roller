@@ -125,9 +125,8 @@ const minifyJS = done => {
  */
 const watchFiles = done => {
   watch(["site/*.njk", "site/includes/**/*.njk"], series(compileCSS));
-  watch("./tailwind.config.js", series(compileCSS));
-  watch("./site/css/**/*.css", series(compileCSS));
-  watch("./site/js/**/*.js", series(compileJS));
+  watch(["site/css/*.css", "site/css/**/*.css"], series(compileCSS));
+  watch(["site/js/*.js", "site/js/**/*.js"], series(compileJS));
   done();
 };
 
