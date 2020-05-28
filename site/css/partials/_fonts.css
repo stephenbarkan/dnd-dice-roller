@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
-
-
 @font-face {
 	font-family: "digital-numbers";
 	src: url("/fonts/digital-numbers.woff") format("woff");
+} 
+
+@font-face {
+	font-family: "gangster-grotesk";
+	src: url("/fonts/GangsterGrotesk-Bold.woff") format("woff");
 } 

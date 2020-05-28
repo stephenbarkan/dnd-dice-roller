@@ -2,11 +2,17 @@ input[type="radio"]:checked {
   & + label > span {
   @apply bg-btn-active-bg border-btn-active-border shadow-btn-active text-btn-active-text;
 
-  /* & > span {
-    @apply transform scale-95 translate-y-px origin-center;
-  } */
+  & > span {
+    @apply transform scale-95 translate-y-px origin-top;
+  }
 }
   /* &:focus + label {
     @apply shadow-outline border-blue-700;
   } */
 } 
+
+#rollButton:active {
+  & > span {
+    @apply transform scale-95 translate-y-px origin-top;
+  }
+}
