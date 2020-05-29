@@ -1,7 +1,8 @@
-      <button id="rollButton"
-              class="text-2xl tracking-wide transition-all duration-150 ease-in-out border rounded-xl shadow-roll text-roll-text bg-roll-bg border-roll-border active:text-roll-active-text active:bg-roll-active-bg active:border-roll-active-border active:shadow-roll-active hover:bg-roll-hover-bg"
-              style="--shadowColor: 100,100,100"
-              @click="
+      <div class="relative pb-full">
+        <a href="#" id="rollDice"
+           class="absolute inset-0 flex cursor-pointer rounded-xl"
+           @click.prevent
+           @click="
               if (clearValue === true) {
                 timeoutAmount = 1
               } else {
@@ -13,5 +14,14 @@
                 clearValue = false
                 outcome = Math.ceil(Math.random() * amount)
               }, timeoutAmount)">
-        <span class="relative block transition-transform duration-150 ease-in-out">roll!</span>
-      </button>
+
+          <span
+                class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-2xl leading-none tracking-wide text-center transition-all duration-200 ease-smooth btnSide rounded-xl">
+
+            <span
+                  class="absolute flex items-center justify-center w-full transition-all duration-200 ease-smooth btnTop rounded-xl">
+              roll!
+            </span>
+          </span>
+        </a>
+      </div>

@@ -1,5 +1,5 @@
 {% macro rollDice(multiplier, index, isSelected)%}
-<div class="relative pb-full">
+<div class="relative pb-full chooseDice">
 
   <input id="{{index}}"
          {% if isSelected %}
@@ -12,11 +12,22 @@
 
   <label for="{{index}}"
          @click="amount = `{{multiplier}}`, clearValue = true"
-         class="absolute inset-0 flex rounded-xl">
+         class="absolute inset-0 flex cursor-pointer rounded-xl chooseDice">
+
     <span
-          class="flex items-center justify-center flex-1 py-6 text-2xl leading-none tracking-wide text-center transition-all duration-200 ease-in-out border rounded-xl hover:bg-btn-hover-bg text-btn-text hover:text-btn-active-text bg-btn-bg border-btn-border shadow-btn">
-      <span class="relative block transition-transform duration-200 ease-in-out">d{{multiplier}}</span>
+          {# the side of the button #}
+
+          class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-2xl leading-none tracking-wide text-center transition-all duration-200 ease-smooth btnSide rounded-xl">
+
+      <span
+            {# the front of the button #}
+
+            class="absolute flex items-center justify-center w-full transition-all duration-200 ease-smooth btnTop rounded-xl">
+        {{multiplier}}
+      </span>
+
     </span>
+
   </label>
 </div>
 {% endmacro %}
