@@ -3,7 +3,8 @@ body {
 }
 
 #rollDice,
-.chooseDice {
+.chooseDice,
+.resultDisplay {
   --base-hue: 20;
   --base-sat: 100%;
   --base-light: 96%;
@@ -35,7 +36,7 @@ body {
 input[type="radio"]:hover + label,
 #rollDice:hover {
   & .btnTop {
-    transform: translateY(1px);
+    transform: translateY(2%);
   }
 }
 
@@ -44,12 +45,14 @@ input[type="radio"]:checked + label,
 input[type="radio"]:active + label,
 #rollDice:active {
   & .btnTop {
-    transform: translateY(5px);
+    transform: translateY(8%);
   }
 }
 
 input[type="radio"]:checked + label,
 input[type="radio"]:active + label {
+  /* --base-hue: 240;
+    --base-light: 98%; */
   --btn-top-clr: hsl(calc(var(--base-hue) - 2), var(--base-sat), calc(var(--base-light) - 2%));
   --highlight-opacity: 60%;
   --btn-text-clr: hsl(calc(var(--base-hue) - 10), calc(var(--base-sat) - 30%), calc(var(--base-light) - 30%));
@@ -87,31 +90,74 @@ input[type="radio"]:active + label {
   box-shadow: var(--btn-top-shadow);
   color: var(--btn-text-clr);
   text-shadow: var(--btn-text-shadow);
+  transition-property: background-color, box-shadow, color, transform;
+  transition-duration: 300ms, 300ms, 300ms, 250ms;
+  transition-timing-function: theme(transitionTimingFunction.smooth), theme(transitionTimingFunction.smooth), theme(transitionTimingFunction.smooth), theme(transitionTimingFunction.bouncy);
 
-  bottom: .5rem;
-  top: -.5rem;
+  bottom: 10%;
+  top: -10%;
 }
 
 
 .resultDisplay {
-  background-color: #373736;
-  box-shadow: inset 0 0 0 1px rgba(36, 51, 46, 0.25), inset 3px 4px 8px rgba(0, 0, 0, 0.32), inset -2px -2px 2px rgba(255, 255, 255, 0.31), inset 1px 1px 0px rgba(255, 255, 255, 0.4);
-  color: #CB940A;
+  --base-hue: 20;
+  --base-sat: 90%;
+  --base-light: 96%;
+  --shadow-opacity: .05;
+  
+  background-color: var(--btn-inset-clr);
+  background-color: hsl(calc(var(--base-hue) - 2), var(--base-sat), var(--base-light));
+  box-shadow:
+  inset 0 0 0 1px hsla(0, 0%, 100%, 0.25),
+  inset 1px 3px 10px -2px hsla(calc(var(--base-hue) - 2), var(--base-sat), 47%, 0.32),
+  inset 0px 0px 0px 2px hsla(calc(var(--base-hue) - 8), var(--base-sat), 96%, 0.15),
+  inset 1px 1px 0px hsla(calc(var(--base-hue) - 2), var(--base-sat), 76%, .5);
+  @apply text-red-500;
+
+  &::after {
+    @apply absolute;
+    border-radius: 36px;
+    background: var(--btn-side-clr);
+    box-shadow: var(--btn-side-shadow);
+    content: '';
+    top: 0px;
+    bottom: -24px;
+    left: -16px;
+    right: -16px;
+    z-index: -2;
+  }
+
   
   &::before {
-    @apply absolute rounded-2xl;
-    background: #5D5A54;
-    box-shadow: 1px 2px 1px #FFFFFF, inset 0px 3px 4px rgba(200, 150, 25, 0.15);
+    @apply absolute;
+    border-radius: 36px;
+    background: var(--btn-top-clr);
+    box-shadow: var(--btn-top-shadow);
+
     content: '';
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
+    top: -16px;
+    bottom: -16px;
+    left: -16px;
+    right: -16px;
     z-index: -1;
   }
+
 }
 
 .displayText {
   transform: translateY(.125em);
+  text-shadow: 2px 2px 0px #fff;
+}
 
+.svgGrid {
+  border-right-color: hsla(12, 90%, 85%, 1);
+  box-shadow: 2px 0px 0px #fff;
+
+  & svg {
+    filter: drop-shadow(2px 1px 0px #fff);
+  }
+}
+
+.blur {
+  filter: blur(5px);
 }

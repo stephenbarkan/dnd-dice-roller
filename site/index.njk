@@ -6,12 +6,13 @@ title: Home
 {% set dice = dice %}
 {% import "components/_chooseDiceButton.njk" as chooseDiceButton %}
 
-<main class="container flex flex-col justify-center flex-1 max-w-md py-8 space-y-8">
 
-  <h1 class="text-5xl leading-none text-center text-gray-800 lowercase">DnD Dice Roller</h1>
+<main class="container flex flex-col justify-center flex-1 max-w-2xl space-y-8 sm:py-8 sm:space-y-16">
 
-  <div class="flex flex-col space-y-4"
-       style="--shadowColor: 100,100,100;"
+
+  <h1 class="text-3xl leading-none text-center text-red-500 lowercase sm:text-5xl">&ldquo;DnD Dice Roller&rdquo;</h1>
+
+  <div class="flex flex-col w-full max-w-sm px-2 mx-auto space-y-8 sm:px-0"
        x-data="{
         amount: '20',
         outcome: '​',
@@ -24,7 +25,7 @@ title: Home
 
     <div class="flex-1 justify-stretch">
 
-      <div class="grid flex-1 grid-cols-3 row-gap-4 col-gap-5 xs:grid-cols-4 sm:grid-cols-4">
+      <div class="grid flex-1 grid-cols-3 row-gap-4 col-gap-5">
 
         {% for die in dice %}
 
@@ -39,7 +40,7 @@ title: Home
   </div>
 </main>
 
-{# <div
-     class="fixed inset-0 pointer-events-none"
-     style="background-image: url(/images/noise.png)">
-     </div> #}
+<footer class="fixed bottom-0 left-0 right-0 p-3 sm:p-4">
+  <p class="text-sm text-center text-red-500">made by <a class="underline" href="https://stephenbarkan.com"
+       target="_blank">Stephen Barkan</a></p>
+</footer>

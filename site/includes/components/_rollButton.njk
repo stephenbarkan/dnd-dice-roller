@@ -1,4 +1,4 @@
-      <div class="relative pb-full">
+      <div class="relative col-span-2">
         <a href="#" id="rollDice"
            class="absolute inset-0 flex cursor-pointer rounded-xl"
            @click.prevent
@@ -6,7 +6,7 @@
               if (clearValue === true) {
                 timeoutAmount = 1
               } else {
-                timeoutAmount = 150
+                timeoutAmount = 250
                 clearValue = true
               }
 
@@ -16,11 +16,11 @@
               }, timeoutAmount)">
 
           <span
-                class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-2xl leading-none tracking-wide text-center transition-all duration-200 ease-smooth btnSide rounded-xl">
+                class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-xl leading-none tracking-wide text-center sm:text-2xl btnSide rounded-xl">
 
             <span
-                  class="absolute flex items-center justify-center w-full transition-all duration-200 ease-smooth btnTop rounded-xl">
-              roll!
+                  class="absolute flex items-center justify-center w-full btnTop rounded-xl">
+              roll a d<span x-text="amount"></span>
             </span>
           </span>
         </a>

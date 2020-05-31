@@ -1,9 +1,4 @@
 @font-face {
-	font-family: "digital-numbers";
-	src: url("/fonts/digital-numbers.woff") format("woff");
-} 
-
-@font-face {
-	font-family: "gangster-grotesk";
-	src: url("/fonts/GangsterGrotesk-Bold.woff") format("woff");
+	font-family: "sporting-grotesque";
+	src: url("/fonts/Sporting_Grotesque-Bold_web.woff2") format("woff2"), url("/fonts/Sporting_Grotesque-Bold_web.woff") format("woff");
 } 

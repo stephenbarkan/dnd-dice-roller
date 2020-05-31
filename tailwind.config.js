@@ -10,38 +10,12 @@ module.exports = {
       }
     },
     colors: {
-      'page-bg': '#FFF8F5',
-      lcd: {
-        'bg': '#393A31',
-        'border': '#171717',
-        'text': '#5EB32A',
-      },
-      btn: {
-        'bg': '#FFEDE4',
-        'border': '#FED4CC',
-        'border-btm': '#F4AD9C',
-        'indent-bg': '#FFE9E4',
-        'text': '#FD8572',
-        'side-bg': '#FAC6B5',
-
-        'hover-bg': '#FFE4D6',
-        'active-bg': '#FFE4D6',
-        'active-border': '#7B916E',
-        'active-text': '#D76B5B',
-      },
-      roll: {
-        'bg': '#F69942',
-        'border': '#C99565',
-        'text': '#6A3607',
-        'hover-bg': '#F9A658',
-        'active-bg': '#EECC91',
-        'active-border': '#C88A50',
-        'active-text': '#B26A2B',
-      },
+      'red-500': '#f06f5c',
     },
 
     transitionTimingFunction: {
-      smooth: 'cubic-bezier(.2,.8,.2,1)'
+      smooth: 'cubic-bezier(.2,.8,.2,1)',
+      bouncy: 'cubic-bezier(0.24, 0, 0.31, 1.75)',
     },
 
     boxShadow: {
@@ -80,8 +54,7 @@ module.exports = {
         full: '100%',
       },
       fontFamily: {
-        'sans': ['SportingGrotesque-Bold', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        'mono': ['digital-numbers', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif']
+        'sans': ['sporting-grotesque', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       }
     },
 
