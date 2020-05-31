@@ -1,8 +1,3 @@
-# Steve Site Template
+# Squishy DnD Dice Roller
 
-This is a template repo for how I like to build websites.
-
-It uses
-* Eleventy – static site generator
-* TailwindCSS – utility-first css framework
-* AlpineJS – framework for writing JS in HTML (like Vue)
+A dice roller for DnD, featuring squishy pink buttons
