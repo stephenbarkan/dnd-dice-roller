@@ -2,34 +2,17 @@
 layout: default
 title: Home
 ---
-{% macro rollDice(multiplier, index, isSelected)%}
-<div class="relative pb-full">
 
-  <input id="{{index}}"
-         {% if isSelected %}
-         checked
-         {% endif %}
-         type="radio"
-         name="dice"
-         class="sr-only"
-         value="Select d{{multiplier}}">
-
-  <label for="{{index}}"
-         class="absolute inset-0 flex items-center justify-center px-3 py-6 font-mono text-lg tracking-wide text-center text-gray-800 bg-white border border-gray-400 rounded-lg shadow-sm hover:border-gray-500 hover:bg-gray-100"
-         @click="amount = `{{multiplier}}`, clearValue = true">
-    d{{multiplier}}
-  </label>
-</div>
-{% endmacro %}
+{% set dice = dice %}
+{% import "components/_chooseDiceButton.njk" as chooseDiceButton %}
 
 
+<main class="container flex flex-col justify-center flex-1 max-w-2xl space-y-8 sm:py-8 sm:space-y-16">
 
 
-<main class="container flex flex-col justify-center flex-1 max-w-md py-20 space-y-8">
+  <h1 class="text-3xl leading-none text-center text-red-500 lowercase sm:text-5xl">&ldquo;DnD Dice Roller&rdquo;</h1>
 
-  <h1 class="text-5xl leading-none text-center text-gray-800">DnD Dice Roller!</h1>
-
-  <div class="flex flex-col space-y-8"
+  <div class="flex flex-col w-full max-w-sm px-2 mx-auto space-y-8 sm:px-0"
        x-data="{
         amount: '20',
         outcome: '​',
@@ -37,50 +20,19 @@ title: Home
         timeoutAmount: 0
        }">
 
-    <div
-         class="flex items-center justify-between px-6 py-4 overflow-hidden text-6xl leading-none text-gray-300 bg-gray-900 border-2 border-teal-400 rounded-lg shadow-lg">
-      <div class="grid w-16 h-16 text-gray-600 grid-absolute">
-        {% for die in dice %}
+    {% include "components/_resultDisplay.njk" %}
 
-        <div class="transition transform grid-inset-0"
-             x-show="amount == '{{die.name | replace("d", "") }}'"
-             x-transition:enter="ease-out duration-200"
-             x-transition:enter-start="opacity-0 -rotate-90 scale-50"
-             x-transition:enter-end="opacity-100 transform-none"
-             x-transition:leave="ease-in duration-150"
-             x-transition:leave-start="opacity-100 transform-none"
-             x-transition:leave-end="opacity-0 rotate-90 scale-50">
-          {% include "icons/" + die.name + ".svg" %}
-        </div>
 
-        {% endfor %}
+    <div class="flex-1 justify-stretch">
 
-      </div>
-
-      <span class="font-light transition transform"
-            style="font-variant-numeric: tabular-nums;"
-            x-show="clearValue == false"
-            x-text="outcome"
-            x-transition:enter="ease-out duration-100"
-            x-transition:enter-start="opacity-0 translate-y-6"
-            x-transition:enter-end="opacity-100 transform-none"
-            x-transition:leave="ease-in duration-100"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0 -translate-y-6"></span>
-    </div>
-
-    <div class="flex flex-col space-y-8 divide-y divide-gray-400 justify-stretch">
-
-      {% include "components/_rollButton.njk" %}
-
-      <div class="grid grid-cols-2 gap-4 pt-8 xs:grid-cols-3 sm:grid-cols-4">
+      <div class="grid flex-1 grid-cols-3 row-gap-4 col-gap-5">
 
         {% for die in dice %}
 
-        {{ rollDice(die.amount, loop.index, die.selected)}}
+        {{ chooseDiceButton.rollDice(die.amount, loop.index, die.selected)}}
 
         {% endfor %}
-
+        {% include "components/_rollButton.njk" %}
       </div>
 
     </div>
@@ -88,5 +40,7 @@ title: Home
   </div>
 </main>
 
-
-{% set dice = dice %}
+<footer class="fixed bottom-0 left-0 right-0 p-3 sm:p-4">
+  <p class="text-sm text-center text-red-500">made by <a class="underline" href="https://stephenbarkan.com"
+       target="_blank">Stephen Barkan</a></p>
+</footer>

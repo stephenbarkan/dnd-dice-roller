@@ -1,0 +1,33 @@
+{% macro rollDice(multiplier, index, isSelected)%}
+<div class="relative pb-full chooseDice">
+
+  <input id="{{index}}"
+         {% if isSelected %}
+         checked
+         {% endif %}
+         type="radio"
+         name="dice"
+         class="sr-only"
+         value="Select d{{multiplier}}">
+
+  <label for="{{index}}"
+         @click="amount = `{{multiplier}}`, clearValue = true"
+         class="absolute inset-0 flex cursor-pointer rounded-xl chooseDice">
+
+    <span
+          {# the side of the button #}
+
+          class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-xl leading-none tracking-wide text-center sm:text-2xl btnSide rounded-xl">
+
+      <span
+            {# the front of the button #}
+
+            class="absolute flex items-center justify-center w-full btnTop rounded-xl">
+        {{multiplier}}
+      </span>
+
+    </span>
+
+  </label>
+</div>
+{% endmacro %}

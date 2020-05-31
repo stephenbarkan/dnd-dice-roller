@@ -10,6 +10,7 @@ const {
 const rename = require("gulp-rename");
 const notify = require("gulp-notify");
 const plumber = require("gulp-plumber");
+const livereload = require('gulp-livereload');
 
 // Styles
 const postcss = require("gulp-postcss");
@@ -68,6 +69,7 @@ const compileCSS = done => {
     ]))
     // ...
     .pipe(dest(paths.css.dest))
+    .pipe(livereload())
     .pipe(
       notify({
         message: "Tailwind Compile Success"
@@ -124,10 +126,14 @@ const minifyJS = done => {
  * Watch files
  */
 const watchFiles = done => {
+  livereload({
+    start: true,
+    reloadPage: 'dist/index.html'
+  })
   watch(["site/*.njk", "site/includes/**/*.njk"], series(compileCSS));
   watch("./tailwind.config.js", series(compileCSS));
-  watch("./site/css/**/*.css", series(compileCSS));
-  watch("./site/js/**/*.js", series(compileJS));
+  watch(["site/css/*.css", "site/css/**/*.css"], series(compileCSS));
+  watch(["site/js/*.js", "site/js/**/*.js"], series(compileJS));
   done();
 };
 

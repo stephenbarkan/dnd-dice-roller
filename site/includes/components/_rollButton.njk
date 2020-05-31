@@ -1,10 +1,12 @@
-      <button
-              class="px-3 py-4 font-mono text-lg tracking-wide text-gray-700 text-gray-800 bg-white border border-gray-400 rounded-lg shadow-sm hover:border-gray-500 hover:bg-gray-100"
-              @click="
+      <div class="relative col-span-2">
+        <a href="#" id="rollDice"
+           class="absolute inset-0 flex cursor-pointer rounded-xl"
+           @click.prevent
+           @click="
               if (clearValue === true) {
                 timeoutAmount = 1
               } else {
-                timeoutAmount = 150
+                timeoutAmount = 250
                 clearValue = true
               }
 
@@ -13,5 +15,13 @@
                 outcome = Math.ceil(Math.random() * amount)
               }, timeoutAmount)">
 
-        Roll a d<span x-text="amount"></span>
-      </button>
+          <span
+                class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-xl leading-none tracking-wide text-center sm:text-2xl btnSide rounded-xl">
+
+            <span
+                  class="absolute flex items-center justify-center w-full btnTop rounded-xl">
+              roll a d<span x-text="amount"></span>
+            </span>
+          </span>
+        </a>
+      </div>

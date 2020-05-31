@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
-
-
 @font-face {
-	font-family: "Bluu Next";
-	src: url("/fonts/bluunext.woff2") format("woff2"), url("/fonts/bluunext.woff") format("woff");
+	font-family: "sporting-grotesque";
+	src: url("/fonts/Sporting_Grotesque-Bold_web.woff2") format("woff2"), url("/fonts/Sporting_Grotesque-Bold_web.woff") format("woff");
 } 
