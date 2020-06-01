@@ -1,4 +1,5 @@
 {
   "name": "Dnd Dice Roller",
-  "favicon": "images/favicon.png"
+  "favicon": "images/favicon.png",
+  "og": "images/og-image.jpg"
 }

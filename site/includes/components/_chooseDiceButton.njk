@@ -11,7 +11,7 @@
          value="Select d{{multiplier}}">
 
   <label for="{{index}}"
-         @click="amount = `{{multiplier}}`, clearValue = true"
+         @click="if (amount !== `{{multiplier}}`) {amount = `{{multiplier}}`, clearValue = true}"
          class="absolute inset-0 flex cursor-pointer rounded-xl chooseDice">
 
     <span
