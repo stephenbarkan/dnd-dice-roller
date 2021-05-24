@@ -3,12 +3,20 @@
 
 <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
       <title>{{ site.name }}</title>
       <meta name="description"
             content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
       <link rel="canonical" href="{{ site.url }}{{ page.url }}">
       <meta property="og:image" content="{{site.og}}" />
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+<link rel="apple-touch-icon" href="/images/apple-icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
 
       {% if helpers.environment == "development" %}
       <link rel="stylesheet" href="/css/main.css">
@@ -34,4 +42,5 @@
 </head>
 
 <body
-      class="flex flex-col justify-center min-h-screen font-sans antialiased leading-normal text-lcd-bg text-default">
+style="-webkit-tap-highlight-color: transparent"
+      class="relative flex flex-col justify-center min-h-screen font-sans antialiased leading-normal text-lcd-bg text-default">

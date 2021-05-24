@@ -1,4 +1,4 @@
-{% macro rollDice(multiplier, index, isSelected)%}
+ {% macro rollDice(multiplier, index, isSelected)%}
 <div class="relative pb-full chooseDice">
 
   <input id="{{index}}"
@@ -17,12 +17,12 @@
     <span
           {# the side of the button #}
 
-          class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-xl leading-none tracking-wide text-center sm:text-2xl btnSide rounded-xl">
+          class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-xl leading-none tracking-wide text-center pointer-events-none sm:text-2xl btnSide rounded-xl">
 
       <span
             {# the front of the button #}
 
-            class="absolute flex items-center justify-center w-full btnTop rounded-xl">
+            class="absolute flex items-center justify-center w-full pointer-events-none btnTop rounded-xl">
         {{multiplier}}
       </span>
 

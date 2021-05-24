@@ -1,7 +1,6 @@
       <div class="relative col-span-2">
-        <a href="#" id="rollDice"
-           class="absolute inset-0 flex cursor-pointer rounded-xl"
-           @click.prevent
+        <button id="rollDice"
+           class="absolute inset-0 flex flex-col w-full h-full cursor-pointer rounded-xl"
            @click="
               if (clearValue === true) {
                 timeoutAmount = 1
@@ -13,15 +12,18 @@
               setTimeout( function() {
                 clearValue = false
                 outcome = Math.ceil(Math.random() * amount)
-              }, timeoutAmount)">
+              }, timeoutAmount)"
+
+              x-on:touchstart="$event.target.classList.add(`active`)"
+              x-on:touchend="$event.target.classList.remove(`active`)">
 
           <span
-                class="relative flex flex-col items-center justify-center flex-1 pb-2 mt-2 text-xl leading-none tracking-wide text-center sm:text-2xl btnSide rounded-xl">
+                class="relative flex flex-col items-center justify-center flex-1 w-full pb-2 mt-2 text-xl leading-none tracking-wide text-center pointer-events-none sm:text-2xl btnSide rounded-xl">
 
             <span
-                  class="absolute flex items-center justify-center w-full btnTop rounded-xl">
+                  class="absolute flex items-center justify-center w-full pointer-events-none btnTop rounded-xl">
               roll a d<span x-text="amount"></span>
             </span>
           </span>
-        </a>
+        </button>
       </div>

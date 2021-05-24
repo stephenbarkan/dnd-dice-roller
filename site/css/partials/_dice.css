@@ -1,5 +1,5 @@
 body {
-  background-color: #FFF8F5;
+  background-color: #fff8f5;
 }
 
 #rollDice,
@@ -9,18 +9,79 @@ body {
   --base-sat: 100%;
   --base-light: 96%;
   --highlight-opacity: 100%;
-  --shadow-opacity: .15;
+  --shadow-opacity: 0.15;
 
-  --btn-text-shadow:  1px 2px 1px hsla(0,0%, 100%, var(--highlight-opacity));
-  --btn-top-shadow: inset -3px -3px 6px hsla(calc(var(--base-hue) - 12), calc(var(--base-sat) - 12%), 38%, calc(var(--shadow-opacity) - .04)), inset 3px 3px 3px hsla(0,0%, 100%, calc(var(--highlight-opacity) - 26%)), inset 0px -1px 1px hsla(calc(var(--base-hue) - 12), calc(var(--base-sat) - 3%), calc(var(--base-light) - 31%), 0.25), inset 0px 0px 1px 2px hsl(calc(var(--base-hue) - 10), calc(var(--base-sat) - 6%), calc(var(--base-light) - 7%));
-  --btn-side-shadow: 0px 2px 4px hsla(calc(var(--base-hue) - 12), var(--base-sat), calc(var(--base-light) - 70%), var(--shadow-opacity)), 2px 0px 8px hsla(calc(var(--base-hue) - 12), var(--base-sat), calc(var(--base-light) - 74%), var(--shadow-opacity)), inset -3px -3px 6px hsla(calc(var(--base-hue) - 12), calc(var(--base-sat) - 12%), calc(var(--base-light) - 68%), calc(var(--shadow-opacity) - .04)), inset 3px 3px 3px hsla(calc(var(--base-hue) - 11), 0%, 100%, 0.43), inset 0px -1px 0px 0px hsla(calc(var(--base-hue) - 12), calc(var(--base-sat) - 3%), calc(var(--base-light) - 31%), 20%);
-  --btn-inset-shadow: -1px 2px 1px hsla(0,0%, 100%, var(--highlight-opacity)), inset 0px 3px 4px hsla(calc(var(--base-hue) - 20), calc(var(--base-sat) - 23%), calc(var(--base-light) - 52%), 0.15);
+  --btn-text-shadow: 1px 2px 1px hsla(0, 0%, 100%, var(--highlight-opacity));
+  --btn-top-shadow: inset -3px -3px 6px
+      hsla(
+        calc(var(--base-hue) - 12),
+        calc(var(--base-sat) - 12%),
+        38%,
+        calc(var(--shadow-opacity) - 0.04)
+      ),
+    inset 3px 3px 3px hsla(0, 0%, 100%, calc(var(--highlight-opacity) - 26%)),
+    inset 0px -1px 1px hsla(calc(var(--base-hue) - 12), calc(var(--base-sat) -
+            3%), calc(var(--base-light) - 31%), 0.25),
+    inset 0px 0px 1px 2px
+      hsl(
+        calc(var(--base-hue) - 10),
+        calc(var(--base-sat) - 6%),
+        calc(var(--base-light) - 7%)
+      );
+  --btn-side-shadow: 0px 2px 4px
+      hsla(
+        calc(var(--base-hue) - 12),
+        var(--base-sat),
+        calc(var(--base-light) - 70%),
+        var(--shadow-opacity)
+      ),
+    2px 0px 8px
+      hsla(
+        calc(var(--base-hue) - 12),
+        var(--base-sat),
+        calc(var(--base-light) - 74%),
+        var(--shadow-opacity)
+      ),
+    inset -3px -3px 6px
+      hsla(
+        calc(var(--base-hue) - 12),
+        calc(var(--base-sat) - 12%),
+        calc(var(--base-light) - 68%),
+        calc(var(--shadow-opacity) - 0.04)
+      ),
+    inset 3px 3px 3px hsla(calc(var(--base-hue) - 11), 0%, 100%, 0.43),
+    inset 0px -1px 0px 0px hsla(calc(var(--base-hue) - 12), calc(var(--base-sat) -
+            3%), calc(var(--base-light) - 31%), 20%);
+  --btn-inset-shadow: -1px 2px 1px hsla(0, 0%, 100%, var(--highlight-opacity)),
+    inset 0px 3px 4px
+      hsla(
+        calc(var(--base-hue) - 20),
+        calc(var(--base-sat) - 23%),
+        calc(var(--base-light) - 52%),
+        0.15
+      );
 
-  --body-bg-clr: hsl(var(--base-hue), var(--base-sat), calc(var(--base-light) + 2%));
-  --btn-text-clr: hsl(calc(var(--base-hue) - 12), calc(var(--base-sat) - 3%), calc(var(--base-light) - 24%));
+  --body-bg-clr: hsl(
+    var(--base-hue),
+    var(--base-sat),
+    calc(var(--base-light) + 2%)
+  );
+  --btn-text-clr: hsl(
+    calc(var(--base-hue) - 12),
+    calc(var(--base-sat) - 3%),
+    calc(var(--base-light) - 24%)
+  );
   --btn-top-clr: hsl(var(--base-hue), var(--base-sat), var(--base-light));
-  --btn-side-clr: hsl(calc(var(--base-hue) - 6), calc(var(--base-sat) - 12%), calc(var(--base-light) - 11%));
-  --btn-inset-clr: hsl(calc(var(--base-hue) - 9), var(--base-sat), calc(var(--base-light) - 2%));
+  --btn-side-clr: hsl(
+    calc(var(--base-hue) - 6),
+    calc(var(--base-sat) - 12%),
+    calc(var(--base-light) - 11%)
+  );
+  --btn-inset-clr: hsl(
+    calc(var(--base-hue) - 9),
+    var(--base-sat),
+    calc(var(--base-light) - 2%)
+  );
 }
 
 #rollDice {
@@ -28,10 +89,17 @@ body {
   --base-light: 90%;
   --base-sat: 100%;
   --highlight-opacity: 100%;
-  --btn-text-clr: hsl(calc(var(--base-hue) - 15), calc(var(--base-sat) - 20%), calc(var(--base-light) - 30%));
-  --btn-top-clr: hsl(var(--base-hue), var(--base-sat), calc(var(--base-light) + 4%));
+  --btn-text-clr: hsl(
+    calc(var(--base-hue) - 15),
+    calc(var(--base-sat) - 20%),
+    calc(var(--base-light) - 30%)
+  );
+  --btn-top-clr: hsl(
+    var(--base-hue),
+    var(--base-sat),
+    calc(var(--base-light) + 4%)
+  );
 }
-
 
 input[type="radio"]:hover + label,
 #rollDice:hover {
@@ -40,9 +108,9 @@ input[type="radio"]:hover + label,
   }
 }
 
-
 input[type="radio"]:checked + label,
 input[type="radio"]:active + label,
+#rollDice.active,
 #rollDice:active {
   & .btnTop {
     transform: translateY(8%);
@@ -53,18 +121,33 @@ input[type="radio"]:checked + label,
 input[type="radio"]:active + label {
   /* --base-hue: 240;
     --base-light: 98%; */
-  --btn-top-clr: hsl(calc(var(--base-hue) - 2), var(--base-sat), calc(var(--base-light) - 2%));
+  --btn-top-clr: hsl(
+    calc(var(--base-hue) - 2),
+    var(--base-sat),
+    calc(var(--base-light) - 2%)
+  );
   --highlight-opacity: 60%;
-  --btn-text-clr: hsl(calc(var(--base-hue) - 10), calc(var(--base-sat) - 30%), calc(var(--base-light) - 30%));
+  --btn-text-clr: hsl(
+    calc(var(--base-hue) - 10),
+    calc(var(--base-sat) - 30%),
+    calc(var(--base-light) - 30%)
+  );
 }
 
-#rollDice:active {
-  --btn-top-clr: hsl(calc(var(--base-hue) - 2), var(--base-sat), var(--base-light));
+#rollDice:active,
+#rollDice.active {
+  --btn-top-clr: hsl(
+    calc(var(--base-hue) - 2),
+    var(--base-sat),
+    var(--base-light)
+  );
   --highlight-opacity: 75%;
-  --btn-text-clr: hsl(calc(var(--base-hue) - 15), calc(var(--base-sat) - 50%), calc(var(--base-light) - 40%));
+  --btn-text-clr: hsl(
+    calc(var(--base-hue) - 15),
+    calc(var(--base-sat) - 50%),
+    calc(var(--base-light) - 40%)
+  );
 }
-
-
 
 .btnSide {
   /* //the side of the button */
@@ -76,7 +159,7 @@ input[type="radio"]:active + label {
     @apply absolute rounded-2xl;
     background-color: var(--btn-inset-clr);
     box-shadow: var(--btn-inset-shadow);
-    content: '';
+    content: "";
     top: 2px;
     left: -6px;
     right: -6px;
@@ -92,26 +175,32 @@ input[type="radio"]:active + label {
   text-shadow: var(--btn-text-shadow);
   transition-property: background-color, box-shadow, color, transform;
   transition-duration: 300ms, 300ms, 300ms, 250ms;
-  transition-timing-function: theme(transitionTimingFunction.smooth), theme(transitionTimingFunction.smooth), theme(transitionTimingFunction.smooth), theme(transitionTimingFunction.bouncy);
+  transition-timing-function: theme(transitionTimingFunction.smooth),
+    theme(transitionTimingFunction.smooth),
+    theme(transitionTimingFunction.smooth),
+    theme(transitionTimingFunction.bouncy);
 
   bottom: 10%;
   top: -10%;
 }
 
-
 .resultDisplay {
   --base-hue: 20;
   --base-sat: 90%;
   --base-light: 96%;
-  --shadow-opacity: .05;
-  
+  --shadow-opacity: 0.05;
+
   background-color: var(--btn-inset-clr);
-  background-color: hsl(calc(var(--base-hue) - 2), var(--base-sat), var(--base-light));
-  box-shadow:
-  inset 0 0 0 1px hsla(0, 0%, 100%, 0.25),
-  inset 1px 3px 10px -2px hsla(calc(var(--base-hue) - 2), var(--base-sat), 47%, 0.32),
-  inset 0px 0px 0px 2px hsla(calc(var(--base-hue) - 8), var(--base-sat), 96%, 0.15),
-  inset 1px 1px 0px hsla(calc(var(--base-hue) - 2), var(--base-sat), 76%, .5);
+  background-color: hsl(
+    calc(var(--base-hue) - 2),
+    var(--base-sat),
+    var(--base-light)
+  );
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.25),
+    inset 1px 3px 10px -2px hsla(calc(var(--base-hue) - 2), var(--base-sat), 47%, 0.32),
+    inset 0px 0px 0px 2px
+      hsla(calc(var(--base-hue) - 8), var(--base-sat), 96%, 0.15),
+    inset 1px 1px 0px hsla(calc(var(--base-hue) - 2), var(--base-sat), 76%, 0.5);
   @apply text-red-500;
 
   &::after {
@@ -119,7 +208,7 @@ input[type="radio"]:active + label {
     border-radius: 36px;
     background: var(--btn-side-clr);
     box-shadow: var(--btn-side-shadow);
-    content: '';
+    content: "";
     top: 0px;
     bottom: -24px;
     left: -16px;
@@ -127,25 +216,23 @@ input[type="radio"]:active + label {
     z-index: -2;
   }
 
-  
   &::before {
     @apply absolute;
     border-radius: 36px;
     background: var(--btn-top-clr);
     box-shadow: var(--btn-top-shadow);
 
-    content: '';
+    content: "";
     top: -16px;
     bottom: -16px;
     left: -16px;
     right: -16px;
     z-index: -1;
   }
-
 }
 
 .displayText {
-  transform: translateY(.125em);
+  transform: translateY(0.125em);
   text-shadow: 2px 2px 0px #fff;
 }
 
