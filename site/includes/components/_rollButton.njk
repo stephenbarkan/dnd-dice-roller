@@ -1,29 +1,43 @@
       <div class="relative col-span-2">
-        <button id="rollDice"
-           class="absolute inset-0 flex flex-col w-full h-full cursor-pointer rounded-xl"
-           @click="
-              if (clearValue === true) {
-                timeoutAmount = 1
-              } else {
-                timeoutAmount = 250
-                clearValue = true
-              }
+        <div  id="rollDice" class="absolute inset-0 flex flex-col w-full h-full cursor-pointer rounded-xl">
+          <span class="relative flex flex-1 w-full pb-2 mt-2 text-xl leading-none tracking-wide text-center sm:text-2xl btnSide rounded-xl">
+            {# roll button #}
+            <span class="relative flex items-center flex-1 btnTop rounded-l-xl">
+              <button class="w-full h-full px-6"
+                @click="
+                if (clearValue === true) {
+                    timeoutAmount = 1
+                } else {
+                    timeoutAmount = 250
+                    clearValue = true
+                }
 
-              setTimeout( function() {
-                clearValue = false
-                outcome = Math.ceil(Math.random() * amount)
-              }, timeoutAmount)"
+                setTimeout( function() {
+                    clearValue = false
+                    outcome = 0
+                    values = []
+                    for (let i = 0; i < quantity; i++) {
+                    const rollAmount = Math.ceil(Math.random() * amount)
+                    outcome = outcome + rollAmount
+                    values = [...values, rollAmount]
+                    }
+                    {# quantity = 1 #}
+                }, timeoutAmount)"
 
-              x-on:touchstart="$event.target.classList.add(`active`)"
-              x-on:touchend="$event.target.classList.remove(`active`)">
-
-          <span
-                class="relative flex flex-col items-center justify-center flex-1 w-full pb-2 mt-2 text-xl leading-none tracking-wide text-center pointer-events-none sm:text-2xl btnSide rounded-xl">
-
-            <span
-                  class="absolute flex items-center justify-center w-full pointer-events-none btnTop rounded-xl">
-              roll a d<span x-text="amount"></span>
+                x-on:touchstart="$event.target.classList.add(`active`)"
+                x-on:touchend="$event.target.classList.remove(`active`)">
+                roll
+                {# <span x-text="quantity"></span> d<span x-text="amount"></span> #}
+              </button>
+            </span>
+            {# increment buttons #}
+            <span class="relative flex flex-col"  id="incrementButtons">
+              <span class="flex flex-col flex-1">
+                <button @click="quantity = quantity + 1; outcome = null; values=[]; clearValue = true" :disabled="quantity === 9" class="relative flex-1 px-8 btnTop rounded-tr-xl"><span class="block w-6 h-6 text-current">{% include "icons/icon-increment.svg" %}</span></button>
+                <button @click="quantity = quantity - 1; outcome = null; values=[]; clearValue = true" :disabled="quantity === 1" class="relative flex-1 px-8 rounded-br-xl btnTop"><span class="block w-6 h-6 text-current">{% include "icons/icon-decrement.svg" %}</span></button>
+              </span>
+            </span>
             </span>
           </span>
-        </button>
+        </div>
       </div>

@@ -101,26 +101,20 @@ body {
   );
 }
 
-input[type="radio"]:hover + label,
-#rollDice:hover {
-  & .btnTop {
-    transform: translateY(2%);
-  }
+input[type="radio"]:hover + label .btnTop,
+#rollDice .btnTop:hover {
+  transform: translateY(2%);
 }
 
-input[type="radio"]:checked + label,
-input[type="radio"]:active + label,
-#rollDice.active,
-#rollDice:active {
-  & .btnTop {
-    transform: translateY(8%);
-  }
+input[type="radio"]:checked + label .btnTop,
+input[type="radio"]:active + label .btnTop,
+#rollDice .btnTop.active,
+#rollDice .btnTop:active {
+  transform: translateY(8%);
 }
 
 input[type="radio"]:checked + label,
 input[type="radio"]:active + label {
-  /* --base-hue: 240;
-    --base-light: 98%; */
   --btn-top-clr: hsl(
     calc(var(--base-hue) - 2),
     var(--base-sat),
@@ -134,8 +128,8 @@ input[type="radio"]:active + label {
   );
 }
 
-#rollDice:active,
-#rollDice.active {
+#rollDice button:active,
+#rollDice button.active {
   --btn-top-clr: hsl(
     calc(var(--base-hue) - 2),
     var(--base-sat),
@@ -147,6 +141,11 @@ input[type="radio"]:active + label {
     calc(var(--base-sat) - 50%),
     calc(var(--base-light) - 40%)
   );
+}
+
+#rollDice .btnTop:disabled {
+  transform: none;
+  pointer-events: none;
 }
 
 .btnSide {
@@ -240,11 +239,32 @@ input[type="radio"]:active + label {
   border-right-color: hsla(12, 90%, 85%, 1);
   box-shadow: 2px 0px 0px #fff;
 
-  & svg {
+  & svg,
+  & #diceAmount {
     filter: drop-shadow(2px 1px 0px #fff);
   }
 }
 
+#rollDice svg {
+  filter: drop-shadow(2px 1px 0px #fff);
+}
+
 .blur {
   filter: blur(5px);
+}
+
+.bg-blur {
+  backdrop-filter: blur(5px);
+}
+
+#incrementButtons::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: rgb(247 190 102);
+  top: calc(90%);
+  left: -2px;
+  height: calc(10% + 8px);
+  z-index: 0;
+  box-shadow: 2px 0px 2px #ffffff55;
 }

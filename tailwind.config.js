@@ -12,6 +12,8 @@ module.exports = {
     colors: {
       "red-500": "#f06f5c",
       white: "#ffffff",
+      current: "currentColor",
+      black: "#1f1f1f",
     },
 
     transitionTimingFunction: {
@@ -41,10 +43,19 @@ module.exports = {
       height: {
         22: "5.5rem",
       },
+      width: {
+        max: "max-content",
+      },
       opacity: {
         10: ".10",
       },
-
+      inset: {
+        "-3": "-.75rem",
+        50: "50%",
+      },
+      translate: {
+        "-50": "-50%",
+      },
       borderRadius: {
         xl: "1.5rem",
         "2xl": "1.75rem",
@@ -101,6 +112,7 @@ module.exports = {
     textColor: ["active, hover, focus"],
     backgroundColor: ["active, hover, focus"],
     borderColor: ["active, hover, focus"],
+    opacity: ["group-hover, hover, responsive"],
   },
   plugins: [],
 };
