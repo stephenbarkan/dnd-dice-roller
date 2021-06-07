@@ -694,14 +694,14 @@ body {
 
 input[type="radio"]:hover + label .btnTop,
 #rollDice .btnTop:hover {
-  transform: translateY(2%);
+  transform: translateY(2px);
 }
 
 input[type="radio"]:checked + label .btnTop,
 input[type="radio"]:active + label .btnTop,
 #rollDice .btnTop.active,
 #rollDice .btnTop:active {
-  transform: translateY(8%);
+  transform: translateY(10px);
 }
 
 input[type="radio"]:checked + label,

@@ -8,7 +8,7 @@
                 if (clearValue === true) {
                     timeoutAmount = 1
                 } else {
-                    timeoutAmount = 250
+                    timeoutAmount = 500
                     clearValue = true
                 }
 
@@ -33,8 +33,20 @@
             {# increment buttons #}
             <span class="relative flex flex-col"  id="incrementButtons">
               <span class="flex flex-col flex-1">
-                <button @click="quantity = quantity + 1; outcome = null; values=[]; clearValue = true" :disabled="quantity === 9" class="relative flex-1 px-8 btnTop rounded-tr-xl"><span class="block w-6 h-6 text-current">{% include "icons/icon-increment.svg" %}</span></button>
-                <button @click="quantity = quantity - 1; outcome = null; values=[]; clearValue = true" :disabled="quantity === 1" class="relative flex-1 px-8 rounded-br-xl btnTop"><span class="block w-6 h-6 text-current">{% include "icons/icon-decrement.svg" %}</span></button>
+                <button
+                    x-on:touchstart="$event.target.classList.add(`active`)"
+                    x-on:touchend="$event.target.classList.remove(`active`)"
+                    @click="quantity = quantity + 1; outcome = null; values=[]; clearValue = true"
+                    :disabled="quantity === 9" class="relative flex-1 px-8 btnTop rounded-tr-xl">
+                        <span class="block w-6 h-6 text-current">{% include "icons/icon-increment.svg" %}</span>
+                </button>
+                <button
+                    x-on:touchstart="$event.target.classList.add(`active`)"
+                    x-on:touchend="$event.target.classList.remove(`active`)"
+                    @click="quantity = quantity - 1; outcome = null; values=[]; clearValue = true"
+                    :disabled="quantity === 1" class="relative flex-1 px-8 rounded-br-xl btnTop">
+                        <span class="block w-6 h-6 text-current">{% include "icons/icon-decrement.svg" %}</span>
+                </button>
               </span>
             </span>
             </span>
