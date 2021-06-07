@@ -769,8 +769,8 @@ input[type="radio"]:active + label {
     cubic-bezier(.2,.8,.2,1),
     cubic-bezier(.2,.8,.2,1),
     cubic-bezier(0.24, 0, 0.31, 1.75);
-  bottom: 10%;
-  top: -10%;
+  bottom: 10px;
+  top: -10px;
 }
 
 .resultDisplay {
@@ -853,13 +853,14 @@ input[type="radio"]:active + label {
 #incrementButtons::after {
   content: "";
   position: absolute;
-  width: 2px;
-  background-color: rgb(247, 190, 102);
+  width: 4px;
+  background-color: transparent;
   top: calc(90%);
-  left: -2px;
-  height: calc(10% + 8px);
+  left: -4px;
+  height: calc(10px);
   z-index: 0;
-  box-shadow: 2px 0px 2px rgba(255,255,255,0.33333);
+  box-shadow: 2px 0px 2px rgba(255, 255, 255, 0.23),
+    inset -2px 0px 2px -1px rgb(237, 188, 125);
 }
 
 /*                                                  */
